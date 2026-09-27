@@ -1,0 +1,22 @@
+# Maven
+target/
+*.class
+
+# Rapports et logs générés (régénérés à chaque exécution, ne pas versionner)
+test-output/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# IntelliJ
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Selenium / WebDriverManager (cache local des drivers)
+.cache/

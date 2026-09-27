@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SauceDemo QA Suite" parallel="none">
+    <!-- parallel="tests" thread-count="2" fonctionne aussi, mais teste d'abord en séquentiel :
+         plusieurs échecs constatés (NoSuchElementException, timeouts 20-25s) semblaient liés
+         à une surcharge de la machine avec 3 Chrome simultanés plutôt qu'à un vrai bug. -->
+
+    <test name="Smoke Tests">
+        <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.saucedemo.tests.*"/>
+        </packages>
+    </test>
+
+    <test name="Sanity Tests">
+        <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <include name="sanity"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.saucedemo.tests.*"/>
+        </packages>
+    </test>
+
+    <test name="Regression Tests">
+        <parameter name="browser" value="chrome"/>
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.saucedemo.tests.*"/>
+        </packages>
+    </test>
+
+</suite>
