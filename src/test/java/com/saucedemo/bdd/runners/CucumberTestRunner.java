@@ -1,4 +1,4 @@
-package com.saucedemo.bdd.runners;
+ package com.saucedemo.bdd.runners;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
@@ -14,9 +14,4 @@ import io.cucumber.testng.CucumberOptions;
         monochrome = true
 )
 public class CucumberTestRunner extends AbstractTestNGCucumberTests {
-
-    @Override
-    public boolean useDataProviderWithScenarios() {
-        return true; // exécution séquentielle des scénarios (evite les conflits de driver partagé)
-    }
 }
